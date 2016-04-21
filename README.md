@@ -5,12 +5,12 @@ OneAPM Performance Test-suit
 -------------
 测试使用Express.JS构建了一个简单的Web接口，模拟一个请求用户资料的场景：
 
-```sequence
-Client->Server:请求数据（参数：user_id，token） 
-Note right of Server: 1. 到redis中验证用户的token
-Note right of Server: 2. 到mongodb中获取用户基本资料和好友id
-Note right of Server: 3. 在mongodb中获取每个好友的基本信息
-Server-->Client: 返回用户个人资料和好友基本信息
+```
+Client --->Server:请求数据（参数：user_id，token） 
+                  Server: 1. 到redis中验证用户的token
+                  Server: 2. 到mongodb中获取用户基本资料和好友id
+                  Server: 3. 在mongodb中获取每个好友的基本信息
+Client <--- Server: 返回用户个人资料和好友基本信息
 ```
 
 准备工作
@@ -19,6 +19,7 @@ Server-->Client: 返回用户个人资料和好友基本信息
  - 环境中保证安装redis和mongodb，使用默认的链接设置
   - 安装Node.JS依赖 `npm install`
    - 编辑`oneapm.js`，填写测使用的license_key
+   - 执行`node prepare.js`，该命令会向redis写入一条记录，在mongodb中创建一个名为`oneapm`的数据库，用于测试
 
    运行Server
    ------

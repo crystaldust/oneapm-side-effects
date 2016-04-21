@@ -1,0 +1,23 @@
+{
+  "name": "oneapm-side-effects",
+  "version": "1.0.0",
+  "description": "A test on OneAPM Node.JS agent",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/crystaldust/oneapm-side-effects.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/crystaldust/oneapm-side-effects/issues"
+  },
+  "homepage": "https://github.com/crystaldust/oneapm-side-effects#readme",
+  "dependencies": {
+    "express": "^4.13.4",
+    "oneapm": "^1.2.20"
+  }
+}

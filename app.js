@@ -1,3 +1,5 @@
+// With or without oneapm
+//require( 'oneapm' );
 var express = require('express');
 var path = require('path');
 var favicon = require('serve-favicon');
